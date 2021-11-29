@@ -13,6 +13,10 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseRequestLocalization(new RequestLocalizationOptions()
+    .AddSupportedCultures(new[] { "en-US", "es-ES" })
+    .AddSupportedUICultures(new[] { "en-US", "es-ES" }));
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
